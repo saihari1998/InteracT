@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/side_nav_bar"
+    android:layout_height="match_parent"
+    tools:context=".chat">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/send_btn"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/send" />
+
+            <EditText
+                android:background="@drawable/layout_shape"
+                android:id="@+id/send_text"
+                android:layout_width="346dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+
+        </RelativeLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/message_swpe_layout"
+            android:layout_width="match_parent"
+            android:layout_height="453dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyc_mess"
+                android:layout_width="match_parent"
+                android:layout_height="455dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
+
+</FrameLayout>
